@@ -7,7 +7,7 @@ void main() {
   List<double> Lantiide = [40, 41, 42];
   List<double> Oldlogitude = [23, 24, 26];
   List<double> OldLantiide = [40, 41, 42];
-  extra_data cool = Ai().main(logitude, Lantiide, Oldlogitude, OldLantiide, 8000);
+  ai_data cool = Ai().main(logitude, Lantiide, Oldlogitude, OldLantiide, 8000);
   print(cool.speed);
   print(cool.distance);
   print(cool.extra_data.ahead);
@@ -19,16 +19,16 @@ class bro_this_return_a_class_use_ahead_and_are_you_ahead {
   late bool are_you_ahead;
 }
 
-class extra_data {
+class ai_data {
   late double distance;
   late double speed;
   late bro_this_return_a_class_use_ahead_and_are_you_ahead extra_data;
 }
 
 class Ai {
-  extra_data main(List<double> logitude, List<double> Lantiide,
+  ai_data main(List<double> logitude, List<double> Lantiide,
       List<double> Oldlogitude, List<double> OldLantiide, double time) {
-    extra_data return_data = extra_data();
+    ai_data return_data = ai_data();
     return_data.distance = distance(logitude, Lantiide);
     return_data.speed = speed(return_data.distance, time);
     return_data.extra_data =
