@@ -37,12 +37,11 @@ class Ai {
   }
 
   double distance(List<double> logitude, List<double> Lantiide) {
-    var math = Distance();
     double totalDistance = 0;
 
     for (int where = 0; where < logitude.length; where++) {
       try {
-        totalDistance = math(LatLng(Lantiide[where], logitude[where]),
+        totalDistance = Distance()(LatLng(Lantiide[where], logitude[where]),
                 LatLng(Lantiide[where + 1], logitude[where + 1])) +
             totalDistance;
       } catch (_) {
