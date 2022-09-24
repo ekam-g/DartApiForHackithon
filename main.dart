@@ -2,12 +2,14 @@ import 'package:latlong2/latlong.dart';
 
 const ms_to_mph = 2.237;
 
+const s_to_h = 3600;
+
 void main() {
   List<double> logitude = [23, 24, 25];
   List<double> Lantiide = [40, 41, 42];
   List<double> Oldlogitude = [23, 24, 26];
   List<double> OldLantiide = [40, 41, 42];
-  ai_data cool = Ai().main(logitude, Lantiide, Oldlogitude, OldLantiide, 8000);
+  ai_data cool = Ai().main(logitude, Lantiide, Oldlogitude, OldLantiide, 8000000);
   print(cool.speed);
   print(cool.distance);
   print(cool.extra_data.ahead);
@@ -53,7 +55,7 @@ class Ai {
 
   double speed(double distance, double time) {
     double first = distance / time;
-    return first * ms_to_mph;
+    return first * ms_to_mph * s_to_h;
   }
 
   bro_this_return_a_class_use_ahead_and_are_you_ahead areYouAhead(
