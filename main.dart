@@ -1,8 +1,8 @@
 import 'package:latlong2/latlong.dart';
 
 void main() {
-  List<double> logitude = [23, 24, 25];
-  List<double> Lantiide = [40, 41, 42];
+  List<double> logitude = [23, 24, 24];
+  List<double> Lantiide = [40, 41, 41.5];
   List<double> Oldlogitude = [23, 24, 26];
   List<double> OldLantiide = [40, 41, 42];
   ai_data cool =
@@ -12,6 +12,11 @@ void main() {
   print(cool.distance);
   print(cool.extra_data.ahead);
   print(cool.extra_data.are_you_ahead);
+  //196.52626620000004
+  // 167.69480355000002
+  // 195228.0
+  // 145015.0
+  // false
 }
 
 class bro_this_return_a_class_use_ahead_and_are_you_ahead {
