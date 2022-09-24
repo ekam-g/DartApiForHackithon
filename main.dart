@@ -2,8 +2,8 @@ import 'dart:math';
 import 'package:latlong2/latlong.dart';
 
 void main() {
-  List<double> logitude = [23, 25, 29];
-  List<double> Lantiide = [40, 42, 46];
+  List<double> logitude = [23, 24, 25];
+  List<double> Lantiide = [40, 41, 42];
   print(find().distance(logitude, Lantiide));
 }
 
@@ -11,20 +11,16 @@ class find {
   double distance(List<double> logitude, List<double> Lantiide) {
     var math = Distance();
     double totalDistance = 0;
-    int where = 0;
-    try {
-      while (where < logitude.length) {
+
+    for (int where = 0; where < logitude.length; where++) {
+      try {
         totalDistance = math(LatLng(Lantiide[where], logitude[where]),
                 LatLng(Lantiide[where + 1], logitude[where + 1])) +
             totalDistance;
-        where++;
+      } catch (_) {
+        return totalDistance;
       }
-    } catch (_) {
-      totalDistance = math(LatLng(Lantiide[where], logitude[where]),
-              LatLng(Lantiide[where - 1], logitude[where - 1])) +
-          totalDistance;
     }
-
     return totalDistance;
   }
 
