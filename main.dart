@@ -5,12 +5,11 @@ void main() {
   List<double> Lantiide = [40, 41, 42];
   List<double> Oldlogitude = [23, 24, 26];
   List<double> OldLantiide = [40, 41, 42];
-  print(find().distance(logitude, Lantiide));
-  print(find().speed(logitude, Lantiide));
-  var cool = find().areYouAhead(logitude, Lantiide, Oldlogitude, OldLantiide);
+  print(Ai().distance(logitude, Lantiide));
+  print(Ai().speed(logitude, Lantiide));
+  var cool = Ai().areYouAhead(logitude, Lantiide, Oldlogitude, OldLantiide);
   print(cool.ahead);
   print(cool.are_you_ahead);
-
 }
 
 class bro_this_return_a_class_use_ahead_and_are_you_ahead {
@@ -18,7 +17,23 @@ class bro_this_return_a_class_use_ahead_and_are_you_ahead {
   late bool are_you_ahead;
 }
 
-class find {
+class bro_this_return_a_class {
+  late double distance;
+  late double speed;
+  late bro_this_return_a_class_use_ahead_and_are_you_ahead extra_data;
+}
+
+class Ai {
+  bro_this_return_a_class main(List<double> logitude, List<double> Lantiide,
+      List<double> Oldlogitude, List<double> OldLantiide, double time) {
+    bro_this_return_a_class return_data = bro_this_return_a_class();
+    return_data.distance = distance(logitude, Lantiide);
+    return_data.speed = speed(return_data.distance, time);
+    return_data.extra_data =
+        areYouAhead(return_data.distance, Oldlogitude, OldLantiide);
+    return return_data;
+  }
+
   double distance(List<double> logitude, List<double> Lantiide) {
     var math = Distance();
     double totalDistance = 0;
@@ -35,31 +50,24 @@ class find {
     return totalDistance;
   }
 
-  double speed(
-    List<double> logitude,
-    List<double> Lantiide,
-  ) {
-    return distance(logitude, Lantiide) / logitude.length.toDouble();
+  double speed(double distance, double time) {
+    return distance / time;
   }
 
   bro_this_return_a_class_use_ahead_and_are_you_ahead areYouAhead(
-      List<double> logitude,
-      List<double> Lantiide,
-      List<double> Oldlogitude,
-      List<double> OldLantiide) {
+      double newDistance, List<double> Oldlogitude, List<double> OldLantiide) {
     var return_data = bro_this_return_a_class_use_ahead_and_are_you_ahead();
-    double new_distance = distance(logitude, Lantiide);
     double ghost = distance(Oldlogitude, OldLantiide);
-    return_data.are_you_ahead = new_distance > ghost;
+    return_data.are_you_ahead = newDistance > ghost;
     switch (return_data.are_you_ahead) {
       case true:
         {
-          return_data.ahead = new_distance - ghost;
+          return_data.ahead = newDistance - ghost;
         }
         break;
       default:
         {
-          return_data.ahead = ghost - new_distance;
+          return_data.ahead = ghost - newDistance;
         }
         break;
     }
