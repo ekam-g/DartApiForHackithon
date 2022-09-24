@@ -1,13 +1,13 @@
 import 'package:latlong2/latlong.dart';
 
-
-
 void main() {
   List<double> logitude = [23, 24, 25];
   List<double> Lantiide = [40, 41, 42];
   List<double> Oldlogitude = [23, 24, 26];
   List<double> OldLantiide = [40, 41, 42];
-  ai_data cool = Ai().main(logitude, Lantiide, Oldlogitude, OldLantiide, 8000000);
+  ai_data cool =
+      Ai().main(logitude, Lantiide, Oldlogitude, OldLantiide, 8000000);
+  print(cool.AvgSpeed);
   print(cool.speed);
   print(cool.distance);
   print(cool.extra_data.ahead);
@@ -20,8 +20,9 @@ class bro_this_return_a_class_use_ahead_and_are_you_ahead {
 }
 
 class ai_data {
-  late double distance;
   late double speed;
+  late double distance;
+  late double AvgSpeed;
   late bro_this_return_a_class_use_ahead_and_are_you_ahead extra_data;
 }
 
@@ -30,9 +31,16 @@ class Ai {
       List<double> Oldlogitude, List<double> OldLantiide, double time) {
     ai_data return_data = ai_data();
     return_data.distance = distance(logitude, Lantiide);
-    return_data.speed = speed(return_data.distance, time);
+    return_data.AvgSpeed = speed(return_data.distance, time);
     return_data.extra_data =
         areYouAhead(return_data.distance, Oldlogitude, OldLantiide);
+    return_data.speed = speed(
+        Distance()(
+            LatLng(
+                Lantiide[Lantiide.length - 2], logitude[logitude.length - 2]),
+            LatLng(
+                Lantiide[Lantiide.length - 1], logitude[logitude.length - 1])),
+        time / Lantiide.length);
     return return_data;
   }
 
