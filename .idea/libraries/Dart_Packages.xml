@@ -1,0 +1,44 @@
+<component name="libraryTable">
+  <library name="Dart Packages" type="DartPackagesLibraryType">
+    <properties>
+      <option name="packageNameToDirsMap">
+        <entry key="clock">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/clock-1.1.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="intl">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/intl-0.17.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="latlong2">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/latlong2-0.8.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/path-1.8.2/lib" />
+            </list>
+          </value>
+        </entry>
+      </option>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/clock-1.1.1/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/intl-0.17.0/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/latlong2-0.8.1/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/path-1.8.2/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
