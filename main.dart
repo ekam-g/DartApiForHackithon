@@ -58,7 +58,8 @@ class Ai {
 
   bro_this_return_a_class_use_ahead_and_are_you_ahead areYouAhead(
       double newDistance, List<double> Oldlogitude, List<double> OldLantiide) {
-    var return_data = bro_this_return_a_class_use_ahead_and_are_you_ahead();
+    bro_this_return_a_class_use_ahead_and_are_you_ahead return_data =
+        bro_this_return_a_class_use_ahead_and_are_you_ahead();
     double ghost = distance(Oldlogitude, OldLantiide);
     return_data.are_you_ahead = newDistance > ghost;
     switch (return_data.are_you_ahead) {
