@@ -1,0 +1,11 @@
+name: test_ai
+description: hello
+version: 1.2.3
+homepage: https://example-pet-store.com/newtify
+documentation: https://example-pet-store.com/newtify/docs
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies: 
+  latlong2: ^0.8.1
