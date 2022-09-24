@@ -1,8 +1,6 @@
 import 'package:latlong2/latlong.dart';
 
-const ms_to_mph = 2.237;
 
-const s_to_h = 3600;
 
 void main() {
   List<double> logitude = [23, 24, 25];
@@ -54,6 +52,8 @@ class Ai {
   }
 
   double speed(double distance, double time) {
+    const ms_to_mph = 2.237;
+    const s_to_h = 3600;
     double first = distance / time;
     return first * ms_to_mph * s_to_h;
   }
