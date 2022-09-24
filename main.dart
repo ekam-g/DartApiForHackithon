@@ -5,8 +5,9 @@ void main() {
   List<double> Lantiide = [40, 41, 41.5];
   List<double> Oldlogitude = [23, 24, 26];
   List<double> OldLantiide = [40, 41, 42];
+  const int time_passed = 8000000;
   ai_data cool =
-      Ai().main(logitude, Lantiide, Oldlogitude, OldLantiide, 8000000);
+      Ai().main(logitude, Lantiide, Oldlogitude, OldLantiide, time_passed);
   print(cool.AvgSpeed);
   print(cool.speed);
   print(cool.distance);
