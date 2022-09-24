@@ -52,10 +52,8 @@ class Ai {
   }
 
   double speed(double distance, double time) {
-    const ms_to_mph = 2.237;
-    const s_to_h = 3600;
     double first = distance / time;
-    return first * ms_to_mph * s_to_h;
+    return first * 2.237 * 3600;
   }
 
   bro_this_return_a_class_use_ahead_and_are_you_ahead areYouAhead(
