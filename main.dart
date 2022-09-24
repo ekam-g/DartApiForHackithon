@@ -45,10 +45,8 @@ class Ai {
 
     return_data.speed = speed(
         Distance()(
-
             LatLng(
                 Lantiide[Lantiide.length - 2], logitude[logitude.length - 2]),
-
             LatLng(
                 Lantiide[Lantiide.length - 1], logitude[logitude.length - 1])),
         time / Lantiide.length);
@@ -57,21 +55,15 @@ class Ai {
   }
 
   double distance(List<double> logitude, List<double> Lantiide) {
-
     double totalDistance = 0;
 
     for (int where = 0; where < logitude.length; where++) {
-
       try {
         totalDistance = Distance()(LatLng(Lantiide[where], logitude[where]),
-
                 LatLng(Lantiide[where + 1], logitude[where + 1])) +
-
             totalDistance;
       } catch (_) {
-
         return totalDistance;
-
       }
     }
     return totalDistance;
