@@ -81,7 +81,7 @@ class Ai {
     bro_this_return_a_class_use_ahead_and_are_you_ahead return_data =
         bro_this_return_a_class_use_ahead_and_are_you_ahead();
 
-    double ghost = distance(Oldlogitude, OldLantiide);
+    double ghost = distance(OldLantiide, Oldlogitude);
 
     return_data.are_you_ahead = newDistance > ghost;
 
